@@ -8,9 +8,9 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
+    '@nuxtjs',
     'plugin:vue/base',
     'plugin:vue/recommended',
-    '@nuxtjs',
     'plugin:nuxt/recommended'
   ],
   plugins: [

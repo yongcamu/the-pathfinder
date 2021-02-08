@@ -1,24 +1,37 @@
 <template>
   <div class="index">
     <div class="access">
-      <button @click="login">
+      <vInput
+        type="text"
+        placeholder="Username"
+        name="username"
+      />
+      <vInput
+        type="password"
+        placeholder="Password"
+        name="password"
+      />
+      <vButton @click="login">
         Login
-      </button>
-      <button @click="register">
+      </vButton>
+      <vButton @click="register">
         Register
-      </button>
+      </vButton>
     </div>
   </div>
 </template>
 
 <script>
+import vInput from '@/components/ui/vInput'
+import vButton from '@/components/ui/vButton'
 export default {
+  components: { vInput, vButton },
   methods: {
     login () {
-      this.$router.push('/play/explore')
+      this.$router.push({ name: 'play-explore' })
     },
     register () {
-      this.$router.push('/play/explore')
+      this.$router.push({ name: 'play-explore' })
     }
   }
 }

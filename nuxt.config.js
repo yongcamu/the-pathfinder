@@ -47,7 +47,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    // https://www.npmjs.com/package/@nuxtjs/style-resources
+    '@nuxtjs/style-resources'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -81,7 +83,18 @@ export default {
 
   googleFonts: {
     families: {
-      Roboto: true
+      Roboto: [400,700,900],
+      'Squada One': 400
     }
-  }
+  },
+
+  styleResources: {
+    scss: [
+      '@/design/_colors.scss',
+      '@/design/_transitions.scss',
+      '@/design/_elements.scss',
+      '@/design/_layouts.scss',
+      '@/design/_styles.scss'
+    ],
+   }
 }
